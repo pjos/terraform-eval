@@ -1,11 +1,11 @@
-variable "vultr_seattle" {
-  description = "Vultr Seattle Region"
-  default = "sea"
+variable "vultr_region" {
+  description = "Vultr Frankfurt Region"
+  default = "fra"
 }
 
-variable "docker_centos" {
-  description = "Docker on CentOS 7"
-  default = 17
+variable "os" {
+  description = "Ubuntu 20.10"
+  default = 413
 }
 
 variable "one_cpu_one_gb_ram" {
