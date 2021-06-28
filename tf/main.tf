@@ -23,8 +23,24 @@ resource "vultr_instance" "my_instance" {
   activation_email       = false
   ddos_protection        = false
   tag                    = "tag"
-  firewall_group_id      = vultr_firewall_group.fwg.id
   ssh_key_ids            = [ vultr_ssh_key.my_ssh_key.id ]
+
+  provisioner "remote-exec" {
+    # Install ansible to get all correct python configuration
+    inline = [ "sudo apt-get update", "sudo apt-get install ansible -y", "echo Done!"]
+
+    connection {
+      host        = self.main_ip
+      type        = "ssh"
+      user        = "root"
+      private_key = chomp(file("~/.ssh/id_rsa"))
+    }
+  }
+
+  provisioner "local-exec" {
+    command = "ANSIBLE_HOST_KEY_CHECKING=False ansible-playbook -u root -i '${self.main_ip},' --private-key ${var.pvt_key} -e 'pub_key=${var.pub_key}' ansible.yml"
+  }
+
 }
 
 resource "vultr_ssh_key" "my_ssh_key" {
@@ -32,16 +48,4 @@ resource "vultr_ssh_key" "my_ssh_key" {
   ssh_key = chomp(file("~/.ssh/id_rsa.pub"))
 }
 
-resource "vultr_firewall_group" "fwg" {
-  description = "docker-fwg"
-}
-
-resource "vultr_firewall_rule" "tcp" {
-  firewall_group_id = vultr_firewall_group.fwg.id
-  protocol          = "udp"
-  subnet            = vultr_instance.my_instance.main_ip
-  subnet_size       = 32
-  port              = "8080"
-  ip_type           = "v4"
-}
 
