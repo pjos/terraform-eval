@@ -17,4 +17,7 @@ https://github.com/vultr/terraform-provider-vultr/tree/master/example
 
 https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-ansible-on-ubuntu-20-04
 
+## Result
+[![asciicast](https://asciinema.org/a/Q4L5Y3HNr4VcDiPbPYMhbW1Ce.png)](https://asciinema.org/a/Q4L5Y3HNr4VcDiPbPYMhbW1Ce)
+
 
