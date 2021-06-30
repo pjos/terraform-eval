@@ -1,0 +1,18 @@
+- become: yes
+  hosts: all
+  name: ubuntu-host
+  tasks:
+    - name: Create user 'adminuser' and add user to 'sudo'
+      user:
+        name: adminuser
+        group: sudo
+    - name: Add SSH key to 'adminuser'
+      authorized_key:
+        user: adminuser
+        state: present
+        key: "{{ lookup('file', pub_key) }}"
+    - name: Update all packages
+      apt:
+        upgrade: dist
+        update_cache: yes
+        cache_valid_time: 3600
