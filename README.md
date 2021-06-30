@@ -21,6 +21,6 @@ https://github.com/vultr/terraform-provider-vultr/tree/master/example
 https://www.digitalocean.com/community/tutorials/how-to-use-ansible-with-terraform-for-configuration-management
 
 ## Result
-[![asciicast](https://asciinema.org/a/Q4L5Y3HNr4VcDiPbPYMhbW1Ce.png)](https://asciinema.org/a/Q4L5Y3HNr4VcDiPbPYMhbW1Ce)
+[![asciicast](https://asciinema.org/a/Q4L5Y3HNr4VcDiPbPYMhbW1Ce.png)](https://asciinema.org/a/Q4L5Y3HNr4VcDiPbPYMhbW1Ce?speed=20)
 
 
