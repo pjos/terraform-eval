@@ -18,7 +18,7 @@ The objective of this lab, with some modifications, has been achieved. Ansibleâ€
 https://github.com/vultr/terraform-provider-vultr/tree/master/example
 
 
-https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-ansible-on-ubuntu-20-04
+https://www.digitalocean.com/community/tutorials/how-to-use-ansible-with-terraform-for-configuration-management
 
 ## Result
 [![asciicast](https://asciinema.org/a/Q4L5Y3HNr4VcDiPbPYMhbW1Ce.png)](https://asciinema.org/a/Q4L5Y3HNr4VcDiPbPYMhbW1Ce)
