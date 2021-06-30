@@ -1,4 +1,7 @@
 # Terraform Evaluation
+## Background 
+Neither Terraform or Ansible are tools that I use on a daily basis, though I’m very familiar with their purpose. I take this opportunity to play around with both of them.
+
 ## Introduction
 Objective of this lab has been to evaluate the combination of [Terraform](https://www.terraform.io/) and [Ansible](https://docs.ansible.com/ansible/latest/index.html) for a simple task of provisioning an Ubuntu VM and level of complexity to install and start using those tools. Terraform is supposed to be good for Infrastructure as Code related tasks while Ansible's strength is more shifted towards IT configuration automation. Vultr.com has been chosen as a Cloud provider. An example from the Vultr Terraform Module has been used as a quickstart.  A blog post on DigitalOcean has been used to understand techniques of handover from Terraform to Ansible. 
 
