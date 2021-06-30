@@ -11,3 +11,10 @@ To get Terraform up and running was quite easy. No issues at all to create an Ub
 ## Conclusion 
 The objective of this lab, with some modifications,  has been achieved. Ansible’s dependency to python shows that this is not really an “out of the box” tool.
 
+## References 
+https://github.com/vultr/terraform-provider-vultr/tree/master/example
+
+
+https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-ansible-on-ubuntu-20-04
+
+
